@@ -239,8 +239,12 @@ object ListOperations {
     println("Printing all the elements which satisfies filter condition using filterNot")
     println(list20.filterNot(i=>i%2 != 0))
 
+<<<<<<< HEAD
     //Reading elements from console
     val inputList = scala.io.StdIn.readLine()
+=======
+
+>>>>>>> 779619430a16d457e3ac9271c89a8195f51ddccc
 
 
 
