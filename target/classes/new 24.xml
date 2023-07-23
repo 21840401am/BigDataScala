@@ -1,0 +1,17 @@
+<data>
+<record>
+<name>ayyappa</name>
+<dept>eee</dept>
+<salary>2000</salary>
+</record>
+<record>
+<name>maruthi</name>
+<dept>ece</dept>
+<salary>3000</salary>
+</record>
+<record>
+<name>gopi</name>
+<dept>it</dept>
+<salary>2500</salary>
+</record>
+</data>
