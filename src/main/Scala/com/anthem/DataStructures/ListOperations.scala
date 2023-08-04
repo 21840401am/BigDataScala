@@ -1,7 +1,6 @@
-package com.anthem.dataStructures
+package com.anthem.DataStructures
 
 import org.apache.spark.sql.SparkSession
-
 
 object ListOperations {
   def main(args: Array[String]): Unit = {
@@ -153,7 +152,7 @@ object ListOperations {
     /* If the length of the collection is less than len, the method returns a negative integer.
      If the length of the collection is equal to len, the method returns 0.
      If the length of the collection is greater than len, the method returns a positive integer
-     .*/
+     .
     val lengthCompareList = list9.lengthCompare(2)
     println(lengthCompareList)
 
@@ -214,10 +213,10 @@ object ListOperations {
     println("printing the size of a list")
     println(list16)
 
-    /*In general, both size and length give you the number of elements in a list.
+    In general, both size and length give you the number of elements in a list.
     However, if you are specifically working with lists or arrays, using length is generally preferred because
      it is more efficient for these collections. If you are working with more general collections, you can use size,
-     which is available on all collections, but be aware that it might take linear time for certain collection types.*/
+     which is available on all collections, but be aware that it might take linear time for certain collection types.
 
     // Getting the minimum value in the list
     val list17 = List(23, 82, 89, 98)
@@ -239,12 +238,12 @@ object ListOperations {
     println("Printing all the elements which satisfies filter condition using filterNot")
     println(list20.filterNot(i=>i%2 != 0))
 
-<<<<<<< HEAD
-    //Reading elements from console
-    val inputList = scala.io.StdIn.readLine()
-=======
 
->>>>>>> 779619430a16d457e3ac9271c89a8195f51ddccc
+    //Reading elements from console
+    val inputList = scala.io.StdIn.readInt()
+
+
+
 
 
 
@@ -253,7 +252,7 @@ object ListOperations {
     list1.foreach(i => print((i * i) + ","))
     list1.foreach(i => print((i * i) + " "))
 
-
+*/
   }
 
 }
