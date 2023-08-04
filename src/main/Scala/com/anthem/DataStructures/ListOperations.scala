@@ -22,16 +22,16 @@ object ListOperations {
     }
 
     // Filtering the elements in the list
-    /*  for (i <- list1 if i > 2 {
+    /*for (i <- list1 if i > 2 {
 
-        print(i)
-      }
-      else {
-        print(i-1)}
-      )
-      {
-        println(i)
-      }*/
+       print(i)
+     }
+     else {
+       print(i-1)}
+     )
+     {
+       println(i)
+     }*/
     // Concatenating two lists
     val list2 = List(23, 45, 67, 85)
     val list3 = List(85, 21, 40, 52)
@@ -125,9 +125,11 @@ object ListOperations {
     // Creating an empty list
     val emptyList: List[Int] = Nil
     println(emptyList)
+
     // Creating an empty list of String
     val emptyStringList: List[String] = Nil
     println(emptyStringList)
+
     // Sorting a list
     val list6 = List(99, 88, 46, 52)
     println("printing the sorted list")
@@ -148,11 +150,11 @@ object ListOperations {
     println("printing the length of the list below")
     println(list10.length)
 
-    // Length compare
-    /* If the length of the collection is less than len, the method returns a negative integer.
+    /*Length compare
+    If the length of the collection is less than len, the method returns a negative integer.
      If the length of the collection is equal to len, the method returns 0.
-     If the length of the collection is greater than len, the method returns a positive integer
-     .
+     If the length of the collection is greater than len, the method returns a positive integer*/
+
     val lengthCompareList = list9.lengthCompare(2)
     println(lengthCompareList)
 
@@ -213,11 +215,11 @@ object ListOperations {
     println("printing the size of a list")
     println(list16)
 
-    In general, both size and length give you the number of elements in a list.
+    /*In general, both size and length give you the number of elements in a list.
     However, if you are specifically working with lists or arrays, using length is generally preferred because
      it is more efficient for these collections. If you are working with more general collections, you can use size,
      which is available on all collections, but be aware that it might take linear time for certain collection types.
-
+*/
     // Getting the minimum value in the list
     val list17 = List(23, 82, 89, 98)
     println("printing the lowest element in a list")
@@ -234,9 +236,9 @@ object ListOperations {
     println(list19.init)
 
     // getting all the elements of a list using filterNot method
-    val list20 = List(50,40,60,30,85)
+    val list20 = List(50, 40, 60, 30, 85)
     println("Printing all the elements which satisfies filter condition using filterNot")
-    println(list20.filterNot(i=>i%2 != 0))
+    println(list20.filterNot(i => i % 2 != 0))
 
 
     //Reading elements from console
@@ -252,7 +254,7 @@ object ListOperations {
     list1.foreach(i => print((i * i) + ","))
     list1.foreach(i => print((i * i) + " "))
 
-*/
+
   }
 
 }
