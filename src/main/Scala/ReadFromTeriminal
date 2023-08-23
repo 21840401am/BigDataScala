@@ -1,0 +1,59 @@
+import scala.io.StdIn._
+
+object ReadFromTeriminal {
+
+  // Reading input from console
+  // readLine method in scala is designed to read strings from the input , not integers
+  println("please enter your name")
+  val name: String = readLine()
+  println(s"My name is $name")
+
+  // To read integers from console we use readInt
+  println("please enter your age")
+  val ageOfPerson: Int = readInt()
+  println(s"My age is $ageOfPerson")
+
+  // To read a boolean value we use readBoolean
+  println("please enter boolean value")
+  val booleanvariable = readBoolean()
+  println(s"HDFS is a storage layer, is it true. Yes it is $booleanvariable")
+
+  // To read  a byte value
+  println("please enter a byte value")
+  val byteValue = readByte()
+  println(s"the byte value we are looking for is $byteValue")
+
+  // To read a double
+  println("please give the double value")
+  val doubleVariable = readDouble()
+  println(s"The double value you are looking for is $doubleVariable")
+
+
+  // to read a float
+  println("please input the float value")
+  val floatVariable = readFloat()
+  println(s"the float value you are looking for is $floatVariable")
+
+  //to read short
+  println("please input the short value")
+  val shortValue = readShort()
+  println(s"The short value you are looking for is $shortValue")
+
+
+  // to read a long
+  println("please input a long value")
+  val longValue = readLong()
+  println(s"the long value you are looking for is $longValue")
+
+
+  // To read a single character
+  println(" please input a character")
+  val charVariable = readChar()
+  println(s"the single character you are looking for is $charVariable")
+
+  // To read a formatted string
+  println("please input a formatted string")
+  val formattedStringVariable = readf("Ayyappa")
+  println(s"the  formatted string  you are looking for is $formattedStringVariable")
+
+}
