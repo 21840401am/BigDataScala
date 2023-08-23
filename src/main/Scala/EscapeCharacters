@@ -1,0 +1,18 @@
+object EscapeCharacters {
+  // using newline character
+  println("my name is \nayyappa\n maruthi\nalapati")
+  // using tab character character
+  println("my name is\tayyappa\tmaruthi\talapati")
+  // Form Feed character \f
+  println("Ayyappa\fMaruthi")
+  // Backspace character
+  println("Ayyappa\bMaruthi")
+  //Carriage return
+  println("Ayyyappa\rMaruthi")
+  // Double quote chracter
+  println("Ayyappa\"Maruthi")
+  // Single quote character
+  println("Ayyappa Maruthi\'Alapati\'")
+  //Back slash character
+  println("Ayyappa Maruthi\\Alapati\\")
+}
