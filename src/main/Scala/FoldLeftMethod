@@ -1,0 +1,11 @@
+object FoldLeftMethod {
+  def main(args:Array[String]):Unit ={
+// foldleft method will take the parameter value and add it to the first element in the list and the resulted value is added to the next element and the process continues
+    val list1:List[Int] = List(1,8,9,10)
+   // val result1 = list1.sum
+    val result = list1.foldLeft(2)(_+_)
+    println(result)
+
+  }
+
+}
