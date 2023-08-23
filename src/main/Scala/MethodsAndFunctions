@@ -1,0 +1,323 @@
+import scala.io.StdIn._
+
+object MethodsAndFunctions {
+  def main(args: Array[String]) {
+
+    // Creating a method to add two numbers
+    def addTwoNum(a: Int, b: Int) {
+      println(a + b)
+    }
+
+    addTwoNum(70, 80)
+
+    // Square of a number
+    def squareNum(a: Int): Unit = {
+      print(a * a)
+    }
+
+    println(squareNum(20))
+
+
+    // Cubes of a number
+    def cubesNum(a: Int): Unit = {
+      println(a * a * a)
+    }
+
+    println(cubesNum(5))
+
+    // Creating a method/function to check if a number ids even or odd
+    def evenList(a: Int): Unit = {
+      if (a % 2 == 0) {
+        println(s"The provided number $a is even")
+      } else {
+        println("The provided number is odd")
+      }
+    }
+
+    //Usage of above function
+    println(evenList(9))
+
+    // Instantiating a class
+
+
+    // using the method from another class
+    // val methodFromAnotherClass = ClassAndObjects.Student.Name
+
+    // parameterless function
+
+    def parameterLessFunction(): Int = 65
+
+    println(parameterLessFunction())
+    println(parameterLessFunction) // So parameter less functions can be just called with their names without parenthesis
+
+    // Function without braces
+
+    /* def concatStrings(a: String, b: String): Unit =
+       println(a + " " + b)
+
+     concatStrings("Ayyappa", "Maruthi")
+     for (k**k-1 <- a) {
+       println(k)
+     }*/
+    // Factorial function
+    /*  def factorialFunction():Unit ={
+        for (k**k-1 <- 1 to 5) {
+          println(k)
+        }
+
+      }*/
+
+    // Recursive function
+    def aRecursiveFunction(a: String, b: Int): Unit = {
+      if (b == 1) a
+      else a + aRecursiveFunction(a, b - 1)
+    }
+
+    println(aRecursiveFunction("Ayyappa", 5))
+
+    // Return type
+    def addTwoStrings(a: Int): Int = {
+      a
+    }
+
+    // declaration and definition of function
+    def functionToAdd(a: Int, b: Int): Int = {
+
+
+      a + b
+
+
+    }
+
+    // Function which uses  return keyword
+    def evenCheck(g: Int): String = {
+
+
+      return if (g % 2 == 0) {
+        "the given number is even"
+      } else {
+        "the given number is ffodd"
+      }
+
+      if (g % 2 != 0) {
+        "the given number is odd"
+      } else {
+        "the given number is even"
+      }
+    }
+
+    println(evenCheck(5))
+
+    // Another Function which uses return keyword
+
+    def cubeNum(a: Int): Int = {
+      return a * a * a * a
+      a * a
+      a * a * a
+      a * a * a * a * a
+    }
+
+    println(cubeNum(8))
+
+    //Anonymous Function which is called as Lambda function or function literal
+    val a = (n: Int, s: Int) => (n * n + s * s)
+    println(a(8, 9))
+
+    // Function without curly braces, if there are more than one expression then it must be enclose in curly braces
+    def sumOfTwoNumbers(a: Int, b: Int): Int =
+      a + b
+    // usage of a function
+    println(sumOfTwoNumbers(10, 15))
+
+    // parentheses are “syntactic sugar” for calling a function’s apply() method.
+    val concatStrings = (a: String, b: String) => (a + " " + b)
+    println(concatStrings("Ayyappa", "Maruthi"))
+    println(concatStrings.apply("Big", "data"))
+    //closure in scala
+    // Difference between a normal function and closure function is free variables
+    // free variables are declared outside a function and not included as a parameter
+    val outsideVariable = 50
+
+    def dailyWage(a: Int): Int =
+      a * outsideVariable
+
+    println(dailyWage(8))
+
+    // In closure we will have pure and impure functions
+    // If a free variable is declared with var keyword then it is impure closure
+    // if a free variable is declared with val keyword then it is a pure closure
+
+
+    // Impure closure example
+    var monthlySalary = 25000
+
+    def salarySumForMonths(b: Int): Int = {
+      b * monthlySalary
+    }
+
+    println(salarySumForMonths(8))
+
+    // pure closure example
+    val mobileData = 2
+
+    def monthlyData(a: Int): Int = {
+      a * mobileData
+    }
+
+    println(monthlyData(9))
+
+    // random method
+    // Method definition allows us to skip parentheses completely for methods without parameters.
+    def randomMethod(): Int = scala.util.Random.nextInt()
+
+    val randomIntFunction = () => scala.util.Random.nextInt()
+    println(randomMethod())
+    // Find the difference between  the two below
+    println(randomIntFunction)
+    println(randomIntFunction())
+
+    // if we need to convert a method into a function, we can use the underscore "_"
+    // Defining a function to find factorial of a number
+    // *= operator combines the  multiplication operation(*) with assignment(=). It is used to multiply the left hand side value by the right hand side value and assign the result back to the left hand side variable
+
+    def factorialOfANumber(a: Int): Int = {
+      var factorial = 1
+      for (i <- 1 to a) {
+        factorial *= i
+      }
+      factorial
+    }
+    // Calling or Invoking the function
+    println(factorialOfANumber(8))
+
+    // Function that takes variable number of arguements
+    def varArgFunction(a: Int*): Unit = {
+
+      for (i <- a) {
+        println(i)
+      }
+    }
+
+    varArgFunction(2, 5, 6, 7, 89, 3)
+
+    // Functions that take variable number of arguements where all the parametrers get added
+    def variableArgFunc2(a: Int*): Int = {
+      var f = 0
+      for (i <- a) {
+        f += i
+      }
+      f
+    }
+
+    println(variableArgFunc2(8, 9, 7, 5, 45))
+
+    // Function that take variable number of arguements and convert them into their respective squares
+    def varArgSquaresFunc(a: Int*): Unit = {
+      for (i <- a) {
+        println(i * i)
+      }
+    }
+
+    // Invoking the above function
+    varArgSquaresFunc(4, 8, 9)
+
+    // Function that take variable strings as arguements
+    def varStringFunc(a: String*): Unit = {
+      for (i <- a) {
+        println(i + i)
+      }
+    }
+    // Invoking varStringFunc
+    varStringFunc("Ayyappa", "maruthi")
+
+    // Create a function that takes List of integers as parameters
+    def squareListColl(a: List[Int]): Unit = {
+      for (i <- a) {
+        println(i * i)
+      }
+    }
+
+    // Invoking the squareListColl
+    val k: List[Int] = List(7, 8, 9, 10, 20)
+    squareListColl(k)
+
+    // write a function to caluculate the avg students of all the  departments
+    // In the below function a is the total no of students and b is total no of departments
+    def avgStu(a: Int, b: Int): Int = {
+      a / b
+    }
+    // Invoking the  avgstu function
+    println(avgStu(100, 10))
+
+
+    // create a function which takes one element and subtract with 2 and then square it
+
+    def custFunc(a: List[Int], b: Int): Unit = {
+      for (i <- a) {
+        println(i - b * i)
+      }
+    }
+
+    // Invoking custFunc
+    val j: List[Int] = List(2, 4, 6)
+    val l: Int = 2
+    println(custFunc(j, l))
+
+
+    // Create a function that should test the list of numbers which are divisibkle by 12
+
+    def divisiblesOfTwelve(a: List[Int]) {
+      for (i <- a) {
+        if (i % 12 == 0) {
+          println(s"$i It is divisible by 12")
+        } else {
+          println(s"$i It is not divisible by 12")
+        }
+      }
+
+    }
+
+    // Invoking the divisiblesOfTwelve
+    val list1: List[Int] = List(8, 10, 24, 20)
+    divisiblesOfTwelve(list1)
+    // WHEN YOU NEED LOOPS USE RECURSION
+    //  A recursive function to print a string 3 times
+
+    def repeatedFunction(a: String, b: Int): String = {
+      if (b == 1) a else a + repeatedFunction(a, b - 1)
+    }
+    // Invoking the repeated function
+    println(repeatedFunction("Ayyappa ", 5))
+
+
+    // Factorial function using recursion function
+    def factRecursion(a: Int): Int = {
+      if (a == 1) a else a * factRecursion(a - 1)
+    }
+
+    // Calling the function
+    println(factRecursion(9))
+
+    // Iterating over a list
+    val list2 = List(4, 2, 8, 9, 10)
+    val sortedList = list2.sorted
+    for (i <- sortedList) {
+      println(i)
+    }
+
+    // Iterating over a list using foreach method
+    val descSortedList = list2.sorted(Ordering.Int.reverse)
+    descSortedList.foreach(i => println(i))
+    descSortedList.foreach(println(_))
+
+    //08/23/2023
+
+    // To sum all the elements of the list
+    val sumList = list2.sum
+    println(sumList)
+
+    // Iterating over a list using foreach method
+    list2.foreach(i => println(i))
+    list2.foreach(println) // we can use similar method to other scala collections like set, array, map, seq and vector
+    list2.foreach(println(_))
+    // varargs means variable arguments of type string
