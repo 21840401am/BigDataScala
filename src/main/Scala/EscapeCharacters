@@ -8,6 +8,7 @@ object EscapeCharacters {
   // Backspace character
   println("Ayyappa\bMaruthi")
   //Carriage return
+  // The keypoint to understand is that '\r' doesn't move to a new line; instead, it moves the cursor to the start of the current line, allowing subsequent chracters to overwrite existing ones on that line
   println("Ayyyappa\rMaruthi")
   // Double quote chracter
   println("Ayyappa\"Maruthi")
